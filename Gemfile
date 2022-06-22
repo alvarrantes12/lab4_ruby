@@ -6,11 +6,12 @@ ruby '2.7.0'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 
 gem 'bootsnap', require: false
-gem 'importmap-rails'
 gem 'haml'
+gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
+gem 'rack-cors'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
