@@ -18,7 +18,7 @@ module Api
     def create
       @movie = Movie.new(movie_params)
       if @movie.save
-        render 'movies/show', status: :created
+        render 'api/movies/show', status: :created
       else
         render :new, status: :unprocessable_entity
       end
@@ -26,7 +26,7 @@ module Api
 
     def update
       if @movie.update(movie_params)
-        render 'movies/show', status: :created
+        render 'api/movies/show', status: :created
       else
         render :new, status: :unprocessable_entity
       end
@@ -34,7 +34,7 @@ module Api
 
     def destroy
       @movie.destroy
-      render 'movies/show', status: :created
+      render 'api/movies/show', status: :created
     end
 
     private
