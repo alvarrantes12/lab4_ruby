@@ -9,6 +9,8 @@ gem 'bootsnap', require: false
 gem 'importmap-rails'
 gem 'haml'
 gem 'jbuilder'
+gem 'rack-cors'
+gem 'rubocop'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'sprockets-rails'
