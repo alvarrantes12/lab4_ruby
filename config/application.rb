@@ -18,5 +18,16 @@ module Lenguajes1
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :post, :options]
+      end
+    end
+
+    I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{yml}')]
+    I18n.default_locale = :es
+
   end
 end
