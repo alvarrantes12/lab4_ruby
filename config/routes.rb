@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :directors
 
-  scope module: :api, path: 'api' do
+  scope module: :api do
     resources :movies
   end
   
