@@ -1,0 +1,14 @@
+%p#notice= notice
+
+.card
+  .card-body
+    %h5.card-title Nombre:
+    %p.card-text &nbsp #{@director.first_name}
+
+    .card-body
+    %h5.card-title Apellido:
+    %p.card-text &nbsp #{@director.last_name}
+
+.row.mt-3
+  .offset-3.col-3
+    = link_to t('application.back_to', model: t('activerecord.modules.director.other')), directors_path, class: "btn btn_secondary btn block"

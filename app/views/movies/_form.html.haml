@@ -1,0 +1,21 @@
+= form_for @movie, validate: true do |f|
+  .form-group.ml-4.mr-4
+    = f.label :name, class: "form-label required"
+    = f.text_field :name, autofocus: true, class: "form-control"
+
+  .form-group.ml-4.mr-4
+    = f.label :year, class: "form-label required"
+    = f.text_field :year, autofocus: true, class: "form-control"
+
+  .form-group.ml-4.mr-4
+    = f.label :director_id, class: "form-label required"
+    = f.select(:director_id, options_for_select(@directors, @movie.director),
+                        {prompt:"Seleccione"}, class: "form-control")
+
+  .row
+    .offset-3.col-3
+      = link_to t('application.back_to', model: t('activerecord.modules.movie.other')), movies_path, class: "btn btn-secondary btn-block"
+      
+    .col-3
+      = button_tag t('application.save', model: t('activerecord.modules.movie.one')), class: "btn btn-outline-success btn-block", 
+          'data-disable-with': "Guardando..."
